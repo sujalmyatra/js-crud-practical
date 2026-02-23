@@ -158,11 +158,7 @@ document.getElementById("sortSelect").addEventListener("change", () => {
 });
 const numberInput = document.getElementById("price");
 
-numberInput.addEventListener("keydown", function (e) {
-  if (["e", "E", "+", "-"].includes(e.key)) {
-    e.preventDefault();
-  }
-});
+
 viewProduct();
 removeSpecials();
 
