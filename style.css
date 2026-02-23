@@ -1,0 +1,48 @@
+.form-control-input{
+    outline: none;
+}
+.col-id { width: 5%; }
+.col-name { width: 15%; }
+.col-code { width: 8%; }
+.col-img { width: 10%; }
+.col-price { width: 10%; }
+.col-desc { width: 30%; }
+.col-action { width: 10%; }
+
+.edit_item, .delete_item, .view_item{
+    cursor: pointer;
+}
+.edit_item:hover{
+    background-color:rgba(25,135,84,0.2);
+}
+.delete_item:hover{
+    background-color:rgba(220,53,69,0.2);
+}
+.view_item:hover{
+    background-color:rgba(255,193,7,0.2);
+}
+.card-img{
+    height: 130px;
+    width: 130px;
+    padding: 4px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.font-sm{
+    font-size: 0.8rem;
+}
+
+
+@media (max-width: 768px) {
+  .just-center {
+    justify-content: center; 
+  }
+}
+@media (max-width: 992px) {
+  .just-center {
+    justify-content: center; 
+  }
+}
