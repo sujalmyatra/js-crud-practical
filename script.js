@@ -33,7 +33,7 @@ newProductAdd.addEventListener("click", () => {
   descAdd.classList.remove("is-invalid", "is-valid");
   imgAdd.classList.remove("is-invalid", "is-valid");
   previewImg[0].src = "./images/preview-image.webp";
-  charCount[0].value = 0;
+  
   clearAddData();
 });
 
