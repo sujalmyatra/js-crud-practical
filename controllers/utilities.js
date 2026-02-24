@@ -72,17 +72,15 @@ export function showToast(message, type, duration = 3000) {
   const toastContainer = document.getElementById("toastContainer");
 
   const color = {
-    add: "text-bg-secondary",
-    delete: "text-bg-danger",
-    edit: "text-bg-success",
-    info: "text-bg-success",
+    success: "text-bg-success",
+    danger: "text-bg-danger",
+    
   };
 
   const icons = {
-    add: "fa-circle-check",
-    delete: "fa-triangle-exclamation",
-    edit: "fa-pen-to-square",
-    info: "fa-circle-info",
+    success: "fa-circle-check",
+    danger: "fa-triangle-exclamation",
+    
   };
 
   const toastEl = document.createElement("div");

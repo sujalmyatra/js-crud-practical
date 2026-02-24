@@ -54,7 +54,7 @@ productAdd.addEventListener("click", async (e) => {
     descAdd.value,
   );
 
-  showToast(msg, "add", 3000);
+  showToast(msg, "success", 3000);
 
   clearAddData();
 
@@ -90,7 +90,7 @@ productEdit.addEventListener("click", async (e) => {
     previewImg[1].src,
   );
 
-  showToast(msg, "edit", 3000);
+  showToast(msg, "success", 3000);
   clearEditData();
   const modal = bootstrap.Modal.getInstance(
     document.getElementById("edit-modal"),
@@ -110,7 +110,7 @@ productDelete.addEventListener("click", () => {
   const id = parseInt(idDelete.value);
 
   const msg = deleteProduct(id);
-  showToast(msg, "delete", 3000);
+  showToast(msg, "success", 3000);
   const modal = bootstrap.Modal.getInstance(
     document.getElementById("delete-modal"),
   );
@@ -144,8 +144,7 @@ tBody.addEventListener("click", (e) => {
     case "view":
       openViewModal(product);
       break;
-    default:
-      console.warn("Unknown action", action);
+    
   }
 });
 

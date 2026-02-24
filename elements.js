@@ -43,3 +43,4 @@ export const filterID = document.getElementById("filterId");
 export const newProductAdd = document.getElementById("add-new-product");
 export const tBody = document.getElementById("productTableBody");
 export const previewImgEdit = document.querySelectorAll(".preview-img");
+export const addCount = document.getElementById("add-count");

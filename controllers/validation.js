@@ -8,7 +8,7 @@ import {
   nameEdit,
   priceEdit,
   descEdit,
-  imgEdit
+  imgEdit,addCount
 } from "../elements.js";
 
 export function validateName(nameEl) {
@@ -50,14 +50,14 @@ export function validateImage(imgEl, isEdit = false, previewSrc = "") {
 
   if (!file.type.startsWith("image/")) {
     toggleInvalid(imgEl, false);
-    showToast("Only [.jpg, .png, .webp, .jpeg, .svg] is allowed", "info", 3000);
+    showToast("Only [.jpg, .png, .webp, .jpeg, .svg] is allowed", "danger", 3000);
     return false;
   }
 
   const maxSize = 300 * 1024;
   if (file.size > maxSize) {
     toggleInvalid(imgEl, false);
-    showToast("Only upto 300kb is allowed", "info", 3000);
+    showToast("Only upto 300kb is allowed", "danger", 3000);
     return false;
   }
 
@@ -77,6 +77,7 @@ export function clearAddData(){
   priceAdd.value = "";
   descAdd.value = "";
   imgAdd.value = "";
+  addCount.textContent = 0;
 }
 
 export function clearEditData(){
