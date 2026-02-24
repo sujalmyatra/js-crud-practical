@@ -33,6 +33,7 @@ newProductAdd.addEventListener("click", () => {
   descAdd.classList.remove("is-invalid", "is-valid");
   imgAdd.classList.remove("is-invalid", "is-valid");
   previewImg[0].src = "./images/preview-image.webp";
+  charCount[0].value = 0;
   clearAddData();
 });
 
@@ -74,6 +75,7 @@ descAdd.addEventListener("input", () => counterDesc(descAdd, charCount[0]));
 productEdit.addEventListener("click", async (e) => {
   
   e.preventDefault();
+  charCount[1].value = 0;
   const isValid =
   validateName(nameEdit) &&
   validatePrice(priceEdit) &&
