@@ -39,8 +39,10 @@ export const productAdd = document.getElementById("product-add");
 export const productEdit = document.getElementById("product-edit");
 export const productDelete = document.getElementById("product-delete");
 
-export const filterID = document.getElementById("filterId");
+export const filterID = document.getElementById("filter-id");
+export const filterSort = document.getElementById("sort-select");
 export const newProductAdd = document.getElementById("add-new-product");
-export const tBody = document.getElementById("productTableBody");
+export const tBody = document.getElementById("product-table-body");
+export const tCaption = document.getElementById("table-caption");
 export const previewImgEdit = document.querySelectorAll(".preview-img");
 export const addCount = document.getElementById("add-count");

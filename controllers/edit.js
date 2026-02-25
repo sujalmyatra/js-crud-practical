@@ -1,6 +1,7 @@
 import { getProducts, saveProducts } from "./storage.js";
 import { convertToBase64 } from "./utilities.js";
 
+//product edit function
 export async function editProduct(id, name, img, price, desc, preview) {
 
   const products = getProducts();

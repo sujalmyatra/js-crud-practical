@@ -24,9 +24,10 @@ import {
   imgInputs, charCount,
   idDelete, previewImg,
   productAdd, productEdit, productDelete,
-  filterID, newProductAdd, tBody
+  filterID, newProductAdd, tBody, filterSort
 } from "./elements.js";
 
+// clear add modal fields
 newProductAdd.addEventListener("click", () => {
   nameAdd.classList.remove("is-invalid", "is-valid");
   priceAdd.classList.remove("is-invalid", "is-valid");
@@ -37,6 +38,7 @@ newProductAdd.addEventListener("click", () => {
   clearAddData();
 });
 
+// product add handler
 productAdd.addEventListener("click", async (e) => {
   e.preventDefault();
 
@@ -72,6 +74,8 @@ descAdd.addEventListener("blur", () => validateDesc(descAdd));
 imgAdd.addEventListener("change", () => validateImage(imgAdd, false));
 descAdd.addEventListener("input", () => counterDesc(descAdd, charCount[0]));
 
+
+// product edit handler
 productEdit.addEventListener("click", async (e) => {
   
   e.preventDefault();
@@ -108,6 +112,8 @@ descEdit.addEventListener("blur", () => validateDesc(descEdit));
 imgEdit.addEventListener("change", () => validateImage(imgEdit, true));
 descEdit.addEventListener("input", () => counterDesc(descEdit, charCount[1]));
 
+
+// product delete handler
 productDelete.addEventListener("click", () => {
   const id = parseInt(idDelete.value);
 
@@ -120,10 +126,12 @@ productDelete.addEventListener("click", () => {
   viewProduct();
 });
 
+// image-preview handler
 imgInputs.forEach((input) => {
   input.addEventListener("change", handleImagePreview);
 });
 
+// table render handler
 tBody.addEventListener("click", (e) => {
   let btn = e.target.closest("[data-action]");
   if (!btn) return;
@@ -150,15 +158,15 @@ tBody.addEventListener("click", (e) => {
   }
 });
 
+//filter by id handler
 filterID.addEventListener("input", () => {
   viewProduct();
 });
 
-document.getElementById("sortSelect").addEventListener("change", () => {
+//filter by sort handler
+filterSort.addEventListener("change", () => {
   viewProduct();
 });
-const numberInput = document.getElementById("price");
-
 
 viewProduct();
 removeSpecials();

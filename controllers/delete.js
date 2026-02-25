@@ -1,5 +1,6 @@
 import { getProducts, saveProducts } from "./storage.js";
 
+//product delete function
 export function deleteProduct(id) {
 
   let products = getProducts();

@@ -1,21 +1,22 @@
-import { getProcessedProducts } from "../controllers/utilities.js"
+import { getProcessedProducts } from "../controllers/utilities.js";
+import { tBody, tCaption } from "../elements.js";
 
-
-export function viewProduct(){
-const tbody = document.getElementById("productTableBody");
-const tCaption = document.getElementById("table-caption");
-
-
-renderTable(tbody, tCaption);
+//table render function
+export function viewProduct() {
+  renderTable(tBody, tCaption);
 }
-function renderTable(tbody, tCaption){
-    const products = getProcessedProducts();
+function renderTable(tbody, tCaption) {
+  const products = getProcessedProducts();
 
-    tCaption.innerHTML = `<span>List of Products : ${products.length}</span>`;
+  tCaption.innerHTML = `<span>List of Products : ${products.length}</span>`;
 
-    tbody.innerHTML = (products.length == 0)? `<tr><td colspan="7"><p class=" mb-1">Product List is empty!!</p></td></tr>` :
-     products.map((product, index) => (
-        `<tr>
+  tbody.innerHTML =
+    products.length == 0
+      ? `<tr><td colspan="7"><p class=" mb-1">Product List is empty!!</p></td></tr>`
+      : products
+          .map(
+            (product, index) =>
+              `<tr>
                                     <th scope="row" class="text-center">
                                         ${index + 1}
                                     </th>
@@ -46,7 +47,7 @@ function renderTable(tbody, tCaption){
                                        
                                        
                                     </td>
-                                </tr>`
-                                
-    )).join("");
+                                </tr>`,
+          )
+          .join("");
 }

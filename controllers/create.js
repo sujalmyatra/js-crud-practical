@@ -2,6 +2,7 @@ import { getProducts, saveProducts } from "./storage.js";
 import Product from "../modules/product.js";
 import { convertToBase64, generateId } from "./utilities.js";
 
+//product create function
 export async function createProduct(name, img, price, desc) {
 
   const products = getProducts();
